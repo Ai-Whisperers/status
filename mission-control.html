@@ -2,7 +2,7 @@
 <style>
 :root{--fg:#ddd;--mut:#888;--bd:#333;--card:#161616;--bg:#0d0d0d;--ok:#4caf7d;--warn:#e0a030;--bad:#e05a5a;--acc:#6aa9ff}
 body{background:var(--bg);color:var(--fg);font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin:0;padding:28px;max-width:1060px}
-h1{font-size:0px;margin:0 0 2px} h1 span{color:var(--mut);font-weight:400}
+h1{font-size:0 publicpx;margin:0 0 2px} h1 span{color:var(--mut);font-weight:400}
 .sub{color:var(--mut);font-size:12px;margin-bottom:20px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:22px}
 .c{border:1px solid var(--bd);border-radius:10px;padding:12px 14px;background:var(--card)}
@@ -23,12 +23,12 @@ a{color:var(--acc)} .muted{color:var(--mut)} .big{font-size:16px}
 footer{margin-top:26px;color:var(--mut);font-size:11px;border-top:1px solid var(--bd);padding-top:10px}
 </style></head><body>
 <h1>AIW MISSION CONTROL <span>/ live</span></h1>
-<div class="sub">generated 2026-09-25 23:2x (auto) UTC · data: 2 cron registries + kanban + bench + ledger · sources refresh 15m–weekly</div>
+<div class="sub">generated auto-generated weekly UTC · data: 2 cron registries + kanban + bench + ledger · sources refresh 15m–weekly</div>
 
 <div class="cards">
 <div class="c"><div class="k">SCHEDULED JOBS</div><div class="v">262</div><div class="n">121 enabled · 3 on flat plan</div></div>
-<div class="c"><div class="k">LAST-RUN HEALTH</div><div class="v" style="color:var(--warn)">83.2%</div><div class="n">84 ok / 101 monitored</div></div>
-<div class="c"><div class="k">ERRORS ACTIVE</div><div class="v" style="color:var(--ok)">0 public</div><div class="n">internal detail — not published</div></div>
+<div class="c"><div class="k">LAST-RUN HEALTH</div><div class="v" style="color:var(--warn)">81.6%</div><div class="n">84 ok / 103 monitored</div></div>
+<div class="c"><div class="k">ERRORS ACTIVE</div><div class="v" style="color:var(--bad)">19</div><div class="n">internal detail — not published</div></div>
 <div class="c"><div class="k">GUARD / SAFETY</div><div class="v">30</div><div class="n">zombies blocked · drill 86/86</div></div>
 <div class="c"><div class="k">EVAL BENCH v2</div><div class="v">7.17</div><div class="n">glm-4.5-flash · 20260925 225951Z</div></div>
 <div class="c"><div class="k">AGENT ACTIONS/WK</div><div class="v">756</div><div class="n">~$75-140/mo LLM spend</div></div>
@@ -41,8 +41,8 @@ footer{margin-top:26px;color:var(--mut);font-size:11px;border-top:1px solid var(
 <ul>
 
 <li><b>Public ledger</b> — <code>public/run-ledger/index.html</code> (trust page, Mon 06:30)</li>
-<li><b>Kanban</b> — <code>internal tooling</code> (169 tasks: 46 blocked / 98 todo)</li>
-<li><b>Chat preview</b> — auto-generated</li>
+<li><b>Kanban</b> — <code>internal task board</code> (169 tasks: 46 blocked / 98 todo)</li>
+<li><b>Chat preview</b> — this file via the desktop preview, refreshed on demand</li>
 </ul>
 <h2>WEEKLY AUTO-RHYTHM (Mondays, no tokens)</h2>
 <ul>
