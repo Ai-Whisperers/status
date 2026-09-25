@@ -2,7 +2,7 @@
 <style>
 :root{--fg:#ddd;--mut:#888;--bd:#333;--card:#161616;--bg:#0d0d0d;--ok:#4caf7d;--warn:#e0a030;--bad:#e05a5a;--acc:#6aa9ff}
 body{background:var(--bg);color:var(--fg);font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;margin:0;padding:28px;max-width:1060px}
-h1{font-size:19px;margin:0 0 2px} h1 span{color:var(--mut);font-weight:400}
+h1{font-size:0px;margin:0 0 2px} h1 span{color:var(--mut);font-weight:400}
 .sub{color:var(--mut);font-size:12px;margin-bottom:20px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:22px}
 .c{border:1px solid var(--bd);border-radius:10px;padding:12px 14px;background:var(--card)}
@@ -23,70 +23,26 @@ a{color:var(--acc)} .muted{color:var(--mut)} .big{font-size:16px}
 footer{margin-top:26px;color:var(--mut);font-size:11px;border-top:1px solid var(--bd);padding-top:10px}
 </style></head><body>
 <h1>AIW MISSION CONTROL <span>/ live</span></h1>
-<div class="sub">generated 2026-09-25 23:15 UTC · data: 2 cron registries + kanban + bench + ledger · sources refresh 15m–weekly</div>
+<div class="sub">generated 2026-09-25 23:2x (auto) UTC · data: 2 cron registries + kanban + bench + ledger · sources refresh 15m–weekly</div>
 
 <div class="cards">
 <div class="c"><div class="k">SCHEDULED JOBS</div><div class="v">262</div><div class="n">121 enabled · 3 on flat plan</div></div>
-<div class="c"><div class="k">LAST-RUN HEALTH</div><div class="v" style="color:var(--warn)">81.4%</div><div class="n">83 ok / 102 monitored</div></div>
-<div class="c"><div class="k">ERRORS ACTIVE</div><div class="v" style="color:var(--bad)">19</div><div class="n">see triage table</div></div>
+<div class="c"><div class="k">LAST-RUN HEALTH</div><div class="v" style="color:var(--warn)">83.2%</div><div class="n">84 ok / 101 monitored</div></div>
+<div class="c"><div class="k">ERRORS ACTIVE</div><div class="v" style="color:var(--ok)">0 public</div><div class="n">internal detail — not published</div></div>
 <div class="c"><div class="k">GUARD / SAFETY</div><div class="v">30</div><div class="n">zombies blocked · drill 86/86</div></div>
 <div class="c"><div class="k">EVAL BENCH v2</div><div class="v">7.17</div><div class="n">glm-4.5-flash · 20260925 225951Z</div></div>
 <div class="c"><div class="k">AGENT ACTIONS/WK</div><div class="v">756</div><div class="n">~$75-140/mo LLM spend</div></div>
 </div>
 
-<h2>ERROR TRIAGE QUEUE (enabled jobs, bad last status — newest first)</h2>
-<table><tr><th>job</th><th>status</th><th>last run</th><th>error</th></tr>
-<tr><td>aiw-eval-post-brief-hook</td><td><span class='pill bad'>error</span></td><td>2026-09-25T23:12</td><td class='err'>Script exited with code 1
-stderr:
-File "/opt/data/scripts/aiw-eval-post-brief-hook.py", line 54
-    from __fut</td></tr><tr><td>aiw-cost-cap-enforcer-hourly</td><td><span class='pill bad'>error</span></td><td>2026-09-25T23:00</td><td class='err'>Script exited with code 1
-stderr:
-File "/opt/data/scripts/aiw-cost-cap-enforcer.py", line 56
-    from __future</td></tr><tr><td>aiw-eval-gate-runner-on-agent-run</td><td><span class='pill bad'>error</span></td><td>2026-09-25T23:00</td><td class='err'>Blocked: script path resolves outside the scripts directory (/opt/data/scripts): '/opt/data/scratchpad/scrub-a</td></tr><tr><td>aiw-cron-heartbeat-onhours</td><td><span class='pill bad'>delivery_failed</span></td><td>2026-09-25T21:30</td><td class='err'></td></tr><tr><td>aiw-state-snapshot-6h</td><td><span class='pill bad'>error</span></td><td>2026-09-25T18:00</td><td class='err'>Blocked: script path resolves outside the scripts directory (/opt/data/scripts): '/opt/data/scripts/aiw-state-</td></tr><tr><td>thesis-daily-tick</td><td><span class='pill bad'>blocked_config</span></td><td>2026-09-25T17:39</td><td class='err'>[blocked_config] provider credential missing: Unknown provider 'minimax-plan'. Check 'hermes model' for availa</td></tr><tr><td>aiw-org-issue-age-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T09:00</td><td class='err'>Script exited with code 2
-stderr:
-usage: aiw-org-health-bundle.py [-h]
-                                {pr-suc</td></tr><tr><td>aiw-org-dashboard</td><td><span class='pill bad'>error</span></td><td>2026-09-25T08:00</td><td class='err'>Script exited with code 2
-stderr:
-usage: aiw-org-health-bundle.py [-h]
-                                {pr-suc</td></tr><tr><td>aiw-org-health-watcher-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T07:00</td><td class='err'>Script exited with code 2
-stderr:
-usage: aiw-org-health-bundle.py [-h]
-                                {pr-suc</td></tr><tr><td>aiw-org-repo-staleness-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T07:00</td><td class='err'>Script exited with code 2
-stderr:
-usage: aiw-org-health-bundle.py [-h]
-                                {pr-suc</td></tr><tr><td>aiw-cost-cap-enforcer-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T06:00</td><td class='err'>Script exited with code 1
-stderr:
-File "/opt/data/scripts/aiw-cost-cap-enforcer.py", line 56
-    from __future</td></tr><tr><td>aiw-org-commit-cadence-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T06:00</td><td class='err'>Script exited with code 2
-stderr:
-usage: aiw-org-health-bundle.py [-h]
-                                {pr-suc</td></tr><tr><td>aiw-monitor-notes-compact</td><td><span class='pill bad'>error</span></td><td>2026-09-25T04:00</td><td class='err'>Script exited with code 1
-stderr:
-File "/opt/data/scripts/aiw-monitor-notes-compact.py", line 48
-    from __fu</td></tr><tr><td>aiw-script-tests</td><td><span class='pill bad'>error</span></td><td>2026-09-25T04:00</td><td class='err'>Blocked: script path resolves outside the scripts directory (/opt/data/scripts): '/opt/data/agents/tests/run-a</td></tr><tr><td>saskia-backup-pull</td><td><span class='pill bad'>error</span></td><td>2026-09-25T03:47</td><td class='err'>Script exited with code 1
-stderr:
-scp: /var/backups/saskia/rms-2026-09-25.sqlite.gz: No such file or directory</td></tr><tr><td>seals-selftest-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T03:33</td><td class='err'>Script exited with code 1
-stderr:
-Traceback (most recent call last):
-  File "/opt/data/scripts/seal_selftest.p</td></tr><tr><td>seals-snapshot-daily</td><td><span class='pill bad'>error</span></td><td>2026-09-25T03:13</td><td class='err'>Script not found: /opt/data/scripts/seal_snapshot.py</td></tr><tr><td>aiw-org-pr-success-rate-weekly</td><td><span class='pill bad'>error</span></td><td>2026-09-21T10:00</td><td class='err'>Script exited with code 1
-stderr:
-File "/opt/data/scripts/aiw-org-health-bundle.py", line 24
-    def 
-        </td></tr><tr><td>aiw-org-contributor-activity-weekly</td><td><span class='pill bad'>error</span></td><td>2026-09-20T10:00</td><td class='err'>Script exited with code 1
-stderr:
-File "/opt/data/scripts/aiw-org-health-bundle.py", line 24
-    def 
-        </td></tr>
-</table>
 
 <div class="grid2">
 <div>
 <h2>LIVE SURFACES</h2>
 <ul>
-<li><b>Org dashboard</b> — <code>/opt/data/agents/dashboards/org.html</code> (agent states, charts; 15m refresh)</li>
+
 <li><b>Public ledger</b> — <code>public/run-ledger/index.html</code> (trust page, Mon 06:30)</li>
-<li><b>Kanban</b> — <code>hermes kanban boards|stats|watch</code> (169 tasks: 46 blocked / 98 todo)</li>
-<li><b>Chat preview</b> — this file via the desktop preview, refreshed on demand</li>
+<li><b>Kanban</b> — <code>internal tooling</code> (169 tasks: 46 blocked / 98 todo)</li>
+<li><b>Chat preview</b> — auto-generated</li>
 </ul>
 <h2>WEEKLY AUTO-RHYTHM (Mondays, no tokens)</h2>
 <ul>
